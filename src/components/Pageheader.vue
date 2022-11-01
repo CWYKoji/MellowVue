@@ -4,14 +4,9 @@
 
 
 <template>
-
-<header id ="siteHeader">
-    <h1>Mellow</h1>
-</header>   
-
-
-
-
+    <header id ="siteHeader">
+        <h1>Mellow</h1>
+    </header>   
 </template>
 
 
