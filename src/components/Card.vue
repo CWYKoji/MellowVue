@@ -1,40 +1,22 @@
 <script setup>
-import { ref } from 'vue';
-import TDList from './TDList.vue'
+  import { ref } from 'vue';
+  import TDList from './TDList.vue'
 
-
-const title = ref('')
-
-
-
+  const title = ref('')
 </script>
-
-
-
 
 <template>
   <form>
     <div class="card">
-    <div class="cardTitle">
-       <input class="inputCardTitle" type="text" name="title" v-on:keydown.enter.prevent/>
+      <div class="cardTitle">
+        <input class="inputCardTitle" type="text" name="title" v-on:keydown.enter.prevent/>
+      </div>
+        <div class ="cardContents">
+          <TDList></TDList>
         </div>
-    <!-- <div class ="cardContents">
-        <textarea class="inputCardContents"  name="contents" />
-    </div> 
-    <div class ="cardContents">
-        <textarea class="inputCardContents"  name="contents" />
-    </div>       -->
-    <div class ="cardContents">
-    <TDList></TDList>
     </div>
-    
-    </div>
-
-
   </form>
-
 </template>
-
 
 <style scoped>
 
@@ -52,19 +34,21 @@ const title = ref('')
     overflow-y: auto;
 }
 
+.cardContents{
+  width: 100%;
+}
+
 .inputCardTitle{
   width: 100%;
   height: 25px;
-  border-style:hidden;
-  
-  
+  border-style:hidden; 
 }
 
 .inputCardContents{
   width: 100%;
   height: 120px;
   border-style: hidden;
-  resize: none;
+  
 }
 
 </style>
