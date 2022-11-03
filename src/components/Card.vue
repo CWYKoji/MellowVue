@@ -21,7 +21,7 @@
 <style scoped>
 
 .card{
-    height: auto;
+    height: fit-content;
     width: 175px;
     border-color: black;
     border-width: 1px;

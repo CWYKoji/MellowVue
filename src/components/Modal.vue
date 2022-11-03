@@ -1,6 +1,8 @@
 <script setup>
 import IconClose from './icons/IconXCircle.vue'
+import { ref } from 'vue';
 
+const modalDescription = ref('')
 const emit = defineEmits(['close-modal'])
 const props = defineProps ({
 
@@ -12,21 +14,22 @@ const props = defineProps ({
 
 const close = () =>{
     emit('close-modal')
-
 }
 
 </script>
 
 
 <template>
-    <div v-if="open" @click="$emit('close')" class="modal-background">
+    <div v-if="open" class="modal-background" @click="">
         <div class="modal">
             <div class="modal-heading">
                 <slot name="header"></slot>
-                <IconClose @click="" />
+                <IconClose @click="close" />
             </div>
             <div class="modal-body">
-                <slot name="body"></slot>
+                <slot name="body">
+                <textarea v-model="modalDescription"></textarea>
+                </slot>
             </div>
         </div>
     </div>

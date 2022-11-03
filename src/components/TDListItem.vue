@@ -3,13 +3,17 @@ import Modal from'./Modal.vue'
 import { ref } from 'vue'
 
 const isModalOpen = ref(false)
+
+
 const openModal = () =>{
     isModalOpen.value = true
 }
+
 const modalClose = () => {
 
     isModalOpen.value=false
 }
+
 const props = defineProps({
     task:{
         type: String,
@@ -24,9 +28,9 @@ const props = defineProps({
 <template>
     <div>
         <a class ="listItem"  @click="openModal">{{props.task}}</a>
-        <Modal :open="isModalOpen" @close="modalClose" @close-modal="modalClose">
+        <Modal :open="isModalOpen" @close-modal="modalClose">
             <template #header><h1>{{props.task}}</h1></template>
-            <template #body>This is the body</template>
+            <template #body></template>
         </Modal>
         
     </div>

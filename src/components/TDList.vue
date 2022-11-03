@@ -26,11 +26,30 @@ const addToList= () =>{
     <div>
         <TDListItem v-for="item in listItems" :task="item.task" :completed="item.completed" ></TDListItem>
     </div>
-    <div>
-        <input placeholder="add a todo" type="text" v-model="todo" v-on:keydown.enter="addToList"/>
-        <!-- <button>Add</button> -->
+    <div class="taskContainer">
+        <input class="newTaskTitle" placeholder="Add a Task" type="text" v-model="todo" v-on:keydown.enter="addToList"/>
     </div>
+    <div class="taskContainer">  
+        <button class="butAddList" type="button" @click="addToList"> Add</button>
+    </div>
+   
+    
+    
 </template>
 
 <style scoped>
+
+
+
+.newTaskTitle{
+    width: 100%;
+
+}
+.butAddList{
+  display: flex;   
+  align-self: center;
+}
+
+
+
 </style>

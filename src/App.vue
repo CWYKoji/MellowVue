@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import Pageheader from './components/Pageheader.vue'
-import Card from './components/Card.vue'
+import Board from './components/Board.vue'
 import TDList from './components/TDList.vue'
 
 
@@ -13,9 +13,9 @@ import TDList from './components/TDList.vue'
 
 
 <Pageheader></Pageheader>
-<Card></Card>
+<Board></Board>
 
-<TDList></TDList>
+<!-- <TDList></TDList> -->
 
 
 
