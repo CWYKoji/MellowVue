@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import BoardListItem from './BoardListItem.vue'
+import IconNewFile from './icons/IconNewFile.vue'
 
 const listItems = ref([
     
@@ -28,7 +29,10 @@ const addToList= () =>{
             <BoardListItem v-for="item in listItems"></BoardListItem>
         </div>
         <div class="taskContainer">  
-            <button class="butAddList" type="button" @click="addToList" > Add</button>
+            <button class="butAddList" type="button" @click="addToList" > 
+                Add Card
+                <IconNewFile/>
+            </button>
         </div>
     </div>
    

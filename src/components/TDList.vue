@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import TDListItem from './TDListItem.vue';
+import IconSmallPlus from './icons/IconSmallPlus.vue'
 
 const listItems = ref([
     
@@ -30,7 +31,10 @@ const addToList= () =>{
         <input class="newTaskTitle" placeholder="Add a Task" type="text" v-model="todo" v-on:keydown.enter="addToList"/>
     </div>
     <div class="taskContainer">  
-        <button class="butAddList" type="button" @click="addToList"> Add</button>
+        <button class="butAddList" type="button" @click="addToList"> 
+            Add
+            <IconSmallPlus/>
+        </button>
     </div>
    
     
@@ -38,7 +42,9 @@ const addToList= () =>{
 </template>
 
 <style scoped>
-
+.taskContainer{
+    margin-bottom: 5px;
+}
 
 
 .newTaskTitle{

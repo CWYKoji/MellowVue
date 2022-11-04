@@ -1,16 +1,8 @@
 <script setup>
-import Card from './Card.vue'
 import BoardList from './BoardList.vue'
-import { ref } from 'vue';
 
-let cards = 1
-const componentsArray = ref([])
 
-const addNewCard = () =>{
-    
-componentsArray.value.push(cards)
 
-}
     
 
 
@@ -31,7 +23,9 @@ componentsArray.value.push(cards)
     position: fixed;
     top: 85px;
     left: 0px;
-
+    width:100%;
+    height: 100%;
+    background-color: #add4ff;
   }
 
 </style>
