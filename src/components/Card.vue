@@ -27,11 +27,9 @@
     border-width: 1px;
     border-style: double;
     flex-direction: column;
-    position: fixed;
-    top: 85px;
-    left: 10px;
     overflow-x: hidden;
     overflow-y: auto;
+    margin-left: 10px;
 }
 
 .cardContents{

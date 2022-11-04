@@ -13,7 +13,7 @@ const addToList= () =>{
 
     listItems.value.push({
         task: todo.value,
-        completed: false,
+        
     })
 
     todo.value = ''
@@ -24,7 +24,7 @@ const addToList= () =>{
 <template>
 
     <div>
-        <TDListItem v-for="item in listItems" :task="item.task" :completed="item.completed" ></TDListItem>
+        <TDListItem v-for="item in listItems" :task="item.task"></TDListItem>
     </div>
     <div class="taskContainer">
         <input class="newTaskTitle" placeholder="Add a Task" type="text" v-model="todo" v-on:keydown.enter="addToList"/>

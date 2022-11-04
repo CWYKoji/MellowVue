@@ -18,9 +18,7 @@ const props = defineProps({
     task:{
         type: String,
     },
-    completed: {
-        type: Boolean
-    }
+    
 
 })
 
@@ -37,8 +35,6 @@ const props = defineProps({
 </template>
 
 <style scoped>
-.completed{
-    text-decoration: line-through;
-}
+
 
 </style>
