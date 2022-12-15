@@ -1,11 +1,5 @@
 <script setup>
 import BoardList from './BoardList.vue'
-
-
-
-    
-
-
 </script>
 
 
@@ -14,10 +8,9 @@ import BoardList from './BoardList.vue'
 <template>
 
 <BoardList class="boardSetup"></BoardList>
-
-
-
 </template>
+
+
 <style scoped>
   .boardSetup{
     position: fixed;
