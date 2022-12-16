@@ -1,18 +1,31 @@
 <script setup>
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import BoardListItem from './BoardListItem.vue'
 import IconNewFile from './icons/IconNewFile.vue'
+import axios from 'axios'
 
-const listItems = ref([
-    
+const baseUrl = 'http://localhost/api'
 
-])
+onMounted(() => {
+    loadListFromApi()
+})
 
+const loadListFromApi = () => {
+    axios.get(`${baseUrl}/todo-lists`)
+    .then((response) => {
+        const data = response.data.data
+        alert(response.data.title)
+        listItems.value = data
+    })
+
+}
+
+const listItems = ref([])
 const todo = ref('')
 
 const addToList= () =>{
 
-    listItems.value.push({
+    listItems.push({
         task: 1,
         
     })

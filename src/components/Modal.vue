@@ -28,7 +28,7 @@ const close = () =>{
             </div>
             <div class="modal-body">
                 <slot name="body">
-                <textarea v-model="modalDescription"></textarea>
+                <textarea  v-model="modalDescription"></textarea>
                 </slot>
             </div>
         </div>
